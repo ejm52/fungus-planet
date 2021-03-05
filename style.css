@@ -1,0 +1,126 @@
+html, body {
+  margin: 0;
+  padding: 0;
+    overflow: hidden;
+}
+canvas {
+  display: block;
+}
+
+.dg.main.taller-than-window .close-button {
+    border-top: 1px solid #ddd;
+}
+
+.dg.main .close-button {
+    background: none;
+}
+ 
+.dg.main .close-button:hover {
+    background-color: #crimson;
+}
+
+.dg {
+    color: #ffbf00;
+    font: 11px 'Fredoka One';
+    font-family: 'Fredoka One', cursive;
+    text-shadow: 0 -1px 0 #111;
+}
+
+.dg {
+    color: #5100ff;
+    text-shadow: none !important;
+}
+
+.dg.main::-webkit-scrollbar {
+    background: #fafafa;
+}
+
+.dg.main::-webkit-scrollbar-thumb {
+    background: #bbb;
+}
+ 
+.dg li:not(.folder) {
+    background: #ffa600;
+    border-bottom: 1px solid #ddd;
+    border-radius: 50px;
+}
+ 
+.dg li.save-row .button {
+    text-shadow: none !important;
+}
+
+.dg li.title {
+    background: #e8e8e8 url(data:image/gif;base64,R0lGODlhBQAFAJEAAP////Pz8////////yH5BAEAAAIALAAAAAAFAAUAAAIIlI+hKgFxoCgAOw==) 6px 10px no-repeat;
+}
+
+.dg .cr.function:hover,.dg .cr.boolean:hover {
+    background: #fff;
+     border-radius: 50px;
+}
+ 
+.dg .c input[type=text] {
+    background: #e9e9e9;
+     border-radius: 50px;
+}
+ 
+.dg .c input[type=text]:hover {
+    background: #eee;
+}
+ 
+.dg .c input[type=text]:focus {
+    background: #eee;
+    color: #555;
+}
+ 
+.dg .c .slider {
+    background: #e9e9e9;
+     border-radius: 50px;
+}
+.dg .c .slider-fg {
+    background: #e9e9e9;
+     border-radius: 50px;
+}
+
+.dg .c .slider:hover {
+    background: #eee;
+     border-radius: 50px;
+}
+
+.container {
+  max-height: 100px;
+  max-width: 940px;
+  margin-top: 25px;
+  padding: 0px 0px 100px;
+}
+
+.heading {
+  border: 1px solid transparent;
+  border-radius: 0px;
+  background-color: transparent;
+  font-family: Oi, sans-serif;
+  color: #ffd900;
+  font-size: 45px;
+  line-height: 80px;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: lowercase;
+  text-shadow: 6px 9px 0 #ff9500;
+  white-space: normal;
+  background-clip: border-box;
+}
+
+.paragraph {
+  margin-top: -15px;
+  padding-top: 0px;
+  padding-left: 33px;
+  font-family: 'Fredoka One', sans-serif;
+  color: #ff9500;
+  font-size: 20px;
+  font-weight: 400;
+  text-shadow: 3px 5px 0 #ffd900;
+}
+
+.body {
+  color: #ffa600;
+}
