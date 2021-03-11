@@ -59,37 +59,37 @@ function draw() {
   if (gui.shroom2){
     rectMode(CENTER);
   fill(gui.stemColor);
-  rect(x/2, y/0.55, w, h);
+  rect(x, y, w, h);
   fill(gui.capColor);
-  arc(x/2, y/0.55 - h /2, cw, ch, -PI, 0, CHORD);
+  arc(x, y - h /2, cw, ch, -PI, 0, CHORD);
   }
   
   if (gui.shroom3){
     fill(gui.stemColor);
-  rect(x3/0.8, y3/0.7, w, h);
+  rect(x3, y3, w, h);
   fill(gui.capColor);
-  arc(x3/0.8, y3/0.7 - h /2, cw, ch, -PI, 0, CHORD);
+  arc(x3, y3 - h /2, cw, ch, -PI, 0, CHORD);
   }
   
   if(gui.shroom4){
     fill(gui.stemColor);
-  rect(x4/4, y4/0.9, w, h);
+  rect(x4, y4, w, h);
   fill(gui.capColor);
-  arc(x4/4, y4/0.9 - h /2, cw, ch, -PI, 0, CHORD);
+  arc(x4, y4 - h /2, cw, ch, -PI, 0, CHORD);
   }
   
   if(gui.shroom5){
     fill(gui.stemColor);
-  rect(x5/0.6, y5/0.99, w, h);
+  rect(x5, y5, w, h);
   fill(gui.capColor);
-  arc(x5/0.6, y5/0.99 - h /2, cw, ch, -PI, 0, CHORD);
+  arc(x5, y5 - h /2, cw, ch, -PI, 0, CHORD);
   }
   
   if(gui.shroom6){
     fill(gui.stemColor);
-  rect(x6/0.55, y6/0.57, w, h);
+  rect(x6, y6, w, h);
   fill(gui.capColor);
-  arc(x6/0.55, y6/0.57 - h /2, cw, ch, -PI, 0, CHORD);
+  arc(x6, y6 - h /2, cw, ch, -PI, 0, CHORD);
   }
   
 
@@ -186,7 +186,7 @@ gui_setup.addFolder('city');
   gui_city.add(gui, 'city').onChange(update);
   gui_city.addColor(gui, 'buildings').onChange(update);
   gui_city.add(gui, 'xCity').onChange(update);
-  gui_city.open();
+  //gui_city.open();
   
   let gui_pond =
 gui_setup.addFolder('pond');
@@ -206,30 +206,30 @@ gui_setup.addFolder('forest');
   let gui_shroom = 
 gui_setup.addFolder('shroom');
   gui_shroom.add(gui, 'width', 2, 50).step(1).onChange(update);
-  gui_shroom.add(gui, 'height', 0, 200).step(1).onChange(update);
+  gui_shroom.add(gui, 'height', 2, 200).step(1).onChange(update);
   gui_shroom.add(gui, 'capWidth', 60, 130).step(1).onChange(update);
   gui_shroom.add(gui, 'capHeight', 60, 150).step(1).onChange(update);
   
   gui_shroom.addColor(gui, 'capColor').onChange(update);
   gui_shroom.addColor(gui, 'stemColor').onChange(update);
   gui_shroom.add(gui, 'shroom').onChange(update);
-  gui_shroom.add(gui, 'xShroom').onChange(update);
-  gui_shroom.add(gui, 'yShroom').onChange(update);
+  gui_shroom.add(gui, 'xShroom', 0, width).step(1).onChange(update);
+  gui_shroom.add(gui, 'yShroom', height/2, height).step(1).onChange(update);
   gui_shroom.add(gui, 'shroom2').onChange(update);
-  gui_shroom.add(gui, 'xShroom2').onChange(update);
-  gui_shroom.add(gui, 'yShroom2').onChange(update);
+  gui_shroom.add(gui, 'xShroom2', 0, width).step(1).onChange(update);
+  gui_shroom.add(gui, 'yShroom2', height/2, height).step(1).onChange(update);
   gui_shroom.add(gui, 'shroom3').onChange(update);
-  gui_shroom.add(gui, 'xShroom3').onChange(update);
-  gui_shroom.add(gui, 'yShroom3').onChange(update);
+  gui_shroom.add(gui, 'xShroom3', 0, width).step(1).onChange(update);
+  gui_shroom.add(gui, 'yShroom3', height/2, height).step(1).onChange(update);
   gui_shroom.add(gui, 'shroom4').onChange(update);
-  gui_shroom.add(gui, 'xShroom4').onChange(update);
-  gui_shroom.add(gui, 'yShroom4').onChange(update);
+  gui_shroom.add(gui, 'xShroom4', 0, width).step(1).onChange(update);
+  gui_shroom.add(gui, 'yShroom4', height/2, height).step(1).onChange(update);
    gui_shroom.add(gui, 'shroom5').onChange(update);
-  gui_shroom.add(gui, 'xShroom5').onChange(update);
-  gui_shroom.add(gui, 'yShroom5').onChange(update);
+  gui_shroom.add(gui, 'xShroom5', 0, width).step(1).onChange(update);
+  gui_shroom.add(gui, 'yShroom5', height/2, height).step(1).onChange(update);
   gui_shroom.add(gui, 'shroom6').onChange(update);
-  gui_shroom.add(gui, 'xShroom6').onChange(update);
-  gui_shroom.add(gui, 'yShroom6').onChange(update);
+  gui_shroom.add(gui, 'xShroom6',0, width).step(1).onChange(update);
+  gui_shroom.add(gui, 'yShroom6', height/2, height).step(1).onChange(update);
   
   //gui_shroom.open();
   
@@ -241,10 +241,10 @@ function Gui(){
   
   this.sky = [146,146,255];
   this.ground = [38,95,41];
-  this.sun = [255,255,123];
-  this.xSun = width/4
-  this.ySun = height/4
-  this.sunSize = 100
+  this.sun = [255, 217, 0];
+  this.xSun = width/1.5;
+  this.ySun = height/4;
+  this.sunSize = 300;
   this.field = true
   
   
@@ -273,23 +273,23 @@ function Gui(){
   this.capWidth = 60;
   this.capHeight = 60;
   this.shroom = true;
-  this.xShroom = width/2;
-  this.yShroom = height/2;
+  this.xShroom = width/1.06;
+  this.yShroom = height/1.2;
   this.shroom2 = true;
-  this.xShroom2 = width/2;
-  this.yShroom2 = height/2;
+  this.xShroom2 = width/1.09;
+  this.yShroom2 = height/1.3;
   this.shroom3 = true;
-  this.xShroom3 = width/2;
-  this.yShroom3 = height/2;
+  this.xShroom3 = width/1.15;
+  this.yShroom3 = height/1.35;
   this.shroom4 = true;
-  this.xShroom4 = width/2;
-  this.yShroom4 = height/2;
+  this.xShroom4 = width/1.14;
+  this.yShroom4 = height/1.2;
   this.shroom5 = true;
-  this.xShroom5 = width/2;
-  this.yShroom5 = height/2;
+  this.xShroom5 = width/1.2;
+  this.yShroom5 = height/1.15;
   this.shroom6 = true;
-  this.xShroom6 = width/2;
-  this.yShroom6 = height/2;
+  this.xShroom6 = width/1.1;
+  this.yShroom6 = height/1.1;
 }
 
 function update(){
@@ -299,4 +299,5 @@ function update(){
 function windowResize() {
   resizeCanvas(windowWidth, windowHeight);
 }
+
 

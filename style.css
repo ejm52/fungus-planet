@@ -3,6 +3,16 @@ html, body {
   padding: 0;
     overflow: hidden;
 }
+
+element.style {
+    outline: none;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    border: 0px;
+    font-weight: bold;
+    text-shadow: rgb(0 0 0 / 70%) 0px 1px 1px;
+    background-color: rgb(58, 58, 140);
+}
 canvas {
   display: block;
 }
@@ -16,23 +26,25 @@ canvas {
 }
  
 .dg.main .close-button:hover {
-    background-color: #crimson;
+    background-color: #ffd900;
+    border-bottom: 1px solid #ddd;
+    border-radius: 50px;
 }
 
 .dg {
-    color: #ffbf00;
+    color: #ffd900;
     font: 11px 'Fredoka One';
     font-family: 'Fredoka One', cursive;
     text-shadow: 0 -1px 0 #111;
 }
 
 .dg {
-    color: #5100ff;
-    text-shadow: none !important;
+    color: #ffd900;
+     text-shadow: 0 1px 0 #000, 0 -1px 0 #000, -1px 0 0 #000, 1px 0 0 #000;
 }
 
 .dg.main::-webkit-scrollbar {
-    background: #fafafa;
+    background: #ffd900;
 }
 
 .dg.main::-webkit-scrollbar-thumb {
@@ -40,9 +52,9 @@ canvas {
 }
  
 .dg li:not(.folder) {
-    background: #ffa600;
-    border-bottom: 1px solid #ddd;
-    border-radius: 50px;
+        background: none;
+    border-bottom: none;
+    border-radius: 10px;
 }
  
 .dg li.save-row .button {
@@ -50,7 +62,7 @@ canvas {
 }
 
 .dg li.title {
-    background: #e8e8e8 url(data:image/gif;base64,R0lGODlhBQAFAJEAAP////Pz8////////yH5BAEAAAIALAAAAAAFAAUAAAIIlI+hKgFxoCgAOw==) 6px 10px no-repeat;
+    background: none;
 }
 
 .dg .cr.function:hover,.dg .cr.boolean:hover {
@@ -61,6 +73,12 @@ canvas {
 .dg .c input[type=text] {
     background: #e9e9e9;
      border-radius: 50px;
+    font-family: 'Fredoka One', sans-serif;
+  color: #ff9500;
+  font-size: 12px;
+  font-weight: 400;
+    
+    
 }
  
 .dg .c input[type=text]:hover {
@@ -75,6 +93,7 @@ canvas {
 .dg .c .slider {
     background: #e9e9e9;
      border-radius: 50px;
+    
 }
 .dg .c .slider-fg {
     background: #e9e9e9;
@@ -87,25 +106,25 @@ canvas {
 }
 
 .container {
-  max-height: 100px;
+  max-height: 50px;
   max-width: 940px;
-  margin-top: 25px;
-  padding: 0px 0px 100px;
+  margin-top: 0px;
+  padding: 0px 0px 0px;
 }
 
 .heading {
-  border: 1px solid transparent;
+  border: 0px solid transparent;
   border-radius: 0px;
   background-color: transparent;
   font-family: Oi, sans-serif;
   color: #ffd900;
   font-size: 45px;
-  line-height: 80px;
+  line-height: 40px;
   font-style: normal;
   font-weight: 400;
   text-decoration: none;
   text-transform: lowercase;
-  text-shadow: 6px 9px 0 #ff9500;
+    text-shadow: 0 1px 0 #000, 0 -1px 0 #000, -1px 0 0 #000, 1px 0 0 #000;
   white-space: normal;
   background-clip: border-box;
 }
@@ -118,7 +137,8 @@ canvas {
   color: #ff9500;
   font-size: 20px;
   font-weight: 400;
-  text-shadow: 3px 5px 0 #ffd900;
+    text-shadow: 0 1px 0 #000, 0 -1px 0 #000, -1px 0 0 #000, 1px 0 0 #000;
+
 }
 
 .body {
